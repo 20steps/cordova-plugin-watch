@@ -33,6 +33,9 @@ window.cordova.plugins.Watch.listen('myOtherChannel', function(message) {
 ```
 
 ### Usage in Objective-C
+
+For the watch to be able to read the messages send by cordova you need to add MMWormhole to your WatchKit Extension in Xcode.
+
 #### Initialize
 ```
 wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.whatever" optionalDirectory:@"myIdentifier"];
