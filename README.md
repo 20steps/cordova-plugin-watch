@@ -57,8 +57,8 @@ wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.wh
 also see http://github.com/mutualmobile/MMWormhole
 
 ### Example App
-Find an example app here: http://github.com/20steps/cordova-plugin-watch-example
-the exampel is a simple cordova app based upon ionic framework that commuincates with a apple watch (watchkit) app
+You can find an example app here: http://github.com/20steps/cordova-plugin-watch-example
+The example is a simple cordova app -- using the ionic framework -- that commuincates with an apple watch (watchkit) app
 
 ### Resources 
 * MMWormhole: http://github.com/mutualmobile/MMWormhole
