@@ -13,7 +13,7 @@ cordova plugin add https://github.com/20steps/cordova-plugin-watch
 ```
 
 ### Configuration
-In Xcode you need to set the development team for your app target and WatchKit Extention target - for this you need a payed iOS dev account). Then add for both tagetes yourt desired *App Group* under your target *Capabilities*.
+In Xcode you need to set the development team for your app target and WatchKit Extention target - for this you need a payed iOS dev account). Then add for both targets your desired *App Group* under your target *Capabilities*.
 
 ### Usage in JavaScript
 #### Initialize
