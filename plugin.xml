@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="de.twentysteps.cordova.watch"
+    version="0.1.">
+    <name>Watch</name>
+    <description>Cordova WatchKit Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,watch,watchkit,apple watch,watch</keywords>
+    <repo>https://github.com/20steps/cordova-plugin-watch.git</repo>
+    <issue>https://github.com/20steps/cordova-plugin-watch/issues</issue>
+
+    <js-module src="www/watch.js" name="watch">
+        <clobbers target="cordova.plugins.Watch" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Watch">
+                <param name="ios-package" value="CDVWatch"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/CDVWatch.h" />
+        <source-file src="src/ios/CDVWatch.m" />
+        <source-file src="src/ios/Vendor/MMWormhole/MMWormhole.h" />
+        <source-file src="src/ios/Vendor/MMWormhole/MMWormhole.m" />
+    </platform>
+</plugin>
