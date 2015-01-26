@@ -17,15 +17,18 @@ In Xcode you need to set the development team for your app target and WatchKit E
 
 ### Usage in JavaScript
 #### Initialize
+We send messages over certain channels. These cannels are like events in JavaScript.
 ```
 window.cordova.plugins.Watch.initialize('group.com.whatever', 'myIdentifier');
 ```
 #### Send message
+We send messages over certain channels. These cannels are like events in JavaScript.
 ```
 window.cordova.plugins.Watch.sendMessage('my message text', 'myChannel');
 ```
 
 #### Receive message
+We listen for messages on a certain channel.
 ```
 window.cordova.plugins.Watch.listen('myOtherChannel', function(message) {
   // my callback function
@@ -37,16 +40,19 @@ window.cordova.plugins.Watch.listen('myOtherChannel', function(message) {
 For the watch to be able to read the messages send by cordova you need to add MMWormhole to your WatchKit Extension in Xcode.
 
 #### Initialize
+We initialize MMWormhole with the *App Group* and an Identifier within this group, in case multiple Apps use the same *App Group*.
 ```
 wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.whatever" optionalDirectory:@"myIdentifier"];
 
 ```
 #### Send message
+We send messages over certain channels. These cannels are like events in JavaScript.
 ```
 [wormhole passMessageObject:@"my message text" identifier:@"myChannel"];
 ```
 
 #### Receive message
+We listen for messages on a certain channel.
 ```
 [wormhole listenForMessageWithIdentifier:@"myOtherChannel" listener:^(id message) {
   // my callback function 
